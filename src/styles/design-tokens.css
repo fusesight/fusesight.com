@@ -1,0 +1,37 @@
+:root {
+  /* Color Palette - Futuristic High Contrast Monochromes */
+  --bg-main: #f5f5f7;
+  --bg-surface: #ffffff;
+  --bg-surface-glass: rgba(255, 255, 255, 0.75);
+  --bg-dark: #09090b;
+  --bg-dark-surface: #141417;
+  --bg-dark-glass: rgba(20, 20, 23, 0.85);
+
+  --text-main: #0d0d0f;
+  --text-muted: #646470;
+  --text-light: #9494a0;
+  --text-inverse: #ffffff;
+  --text-inverse-muted: #a1a1aa;
+
+  --accent-black: #0d0d0f;
+  --accent-gray: #e4e4e7;
+  --accent-gray-light: #f4f4f5;
+  --accent-glow: rgba(0, 0, 0, 0.05);
+  
+  --border-light: #e4e4e7;
+  --border-dark: #27272a;
+  
+  /* Fonts */
+  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
+
+  /* Shadows & Effects */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.1);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
