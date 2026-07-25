@@ -6,7 +6,7 @@
   min-height: 680px;
 }
 
-/* Background Geometric Light Grey Ribbon matching Image 1 */
+/* Background Geometric Light Grey Ribbon matching Image 1 - Shifted UP */
 .hero-bg-ribbon {
   position: absolute;
   top: 330px;
@@ -119,8 +119,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  padding-top: 35px;
-  transform: translateY(15px);
+  padding-top: 10px;
 }
 
 .trusted-box {
