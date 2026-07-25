@@ -1,19 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, ArrowUpRight, Box } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="navbar-header">
+    <header className={`navbar-header ${isScrolled ? 'scrolled' : 'at-top'}`}>
       <div className="container navbar-container">
-        {/* Brand Logo matching NeoVision cube icon style */}
+        {/* Brand Logo matching NeoVision / visual theme reference */}
         <a href="#home" className="navbar-brand">
           <div className="brand-icon">
             <Box size={22} strokeWidth={2.2} />
           </div>
-          <span className="brand-name">FuseSight</span>
+          <span className="brand-name">NeoVision</span>
         </a>
 
         {/* Navigation Links */}
