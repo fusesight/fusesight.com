@@ -6,16 +6,16 @@
   min-height: 680px;
 }
 
-/* Background Geometric Light Grey Ribbon matching Image 1 */
+/* Background Geometric Light Grey Ribbon matching Image 1 - Shifted UP */
 .hero-bg-ribbon {
   position: absolute;
-  top: 360px;
+  top: 330px;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 140px;
   background-color: #e6e6e9;
   z-index: 1;
-  clip-path: polygon(0 45px, 42% 45px, 54% 0, 100% 0, 100% 85px, 54% 85px, 42% 130px, 0 130px);
+  clip-path: polygon(0 50px, 40% 50px, 52% 0, 100% 0, 100% 90px, 52% 90px, 40% 140px, 0 140px);
   pointer-events: none;
 }
 
@@ -211,8 +211,8 @@
 /* Stat placed directly on the grey ribbon matching Image 1 */
 .ribbon-stat-item {
   position: absolute;
-  top: 295px;
-  left: -90px;
+  top: 200px;
+  left: -80px;
   z-index: 4;
   display: flex;
   flex-direction: column;
@@ -235,10 +235,10 @@
 
 /* Dark Angular Bottom Cutout Section matching Image 1 */
 .hero-dark-section {
-  background-color: var(--bg-dark);
+  background-color: #000000;
   color: var(--text-inverse);
-  margin-top: -85px;
-  padding: 45px 0 35px 0;
+  margin-top: -65px;
+  padding: 50px 0 60px 0;
   position: relative;
   z-index: 10;
   /* Step-down angular cut matching Image 1 */
@@ -248,12 +248,13 @@
 .dark-section-container {
   display: flex;
   align-items: center;
-  gap: 60px;
-  padding-top: 18px;
+  gap: 40px;
+  padding-top: 15px;
+  justify-content: flex-start;
 }
 
 .dark-left-accent-line {
-  width: 80px;
+  width: 60px;
   height: 1px;
   background-color: #33333f;
 }
@@ -261,7 +262,7 @@
 .brand-partners {
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 60px;
 }
 
 .partner-logo {
@@ -279,12 +280,15 @@
   .hero-container {
     grid-template-columns: 1fr;
   }
+
   .hero-title {
     font-size: 3.2rem;
   }
+
   .hero-bg-ribbon {
     display: none;
   }
+
   .hero-dark-section {
     clip-path: none;
     margin-top: 20px;
