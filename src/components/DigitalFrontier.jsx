@@ -7,7 +7,7 @@ export default function DigitalFrontier() {
   const [activeTab, setActiveTab] = useState('Mission');
 
   const tabContents = {
-    Mission: "NeoVision & FuseSight is dedicated to pushing the boundaries of spatial computing and autonomous agent technology, delivering hyper-realistic virtual environments for global pioneers.",
+    Mission: "FuseSight is dedicated to pushing the boundaries of spatial computing and autonomous agent technology, delivering hyper-realistic virtual environments for global pioneers.",
     Vision: "To establish a seamless digital universe where spatial visual interfaces, AI intelligence, and real-time telemetric data converge into an effortless human experience.",
     Values: "Built on absolute precision, ultra-low latency SLAs, zero-trust security architecture, and uncompromising visual excellence."
   };

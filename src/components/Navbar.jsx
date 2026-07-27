@@ -22,12 +22,12 @@ export default function Navbar() {
   return (
     <header className={`navbar-header ${isScrolled ? 'scrolled' : 'at-top'}`}>
       <div className="container navbar-container">
-        {/* Brand Logo matching NeoVision / visual theme reference */}
+        {/* Brand Logo matching FuseSight / visual theme reference */}
         <a href="#home" className="navbar-brand">
           <div className="brand-icon">
             <Box size={22} strokeWidth={2.2} />
           </div>
-          <span className="brand-name">NeoVision</span>
+          <span className="brand-name">FuseSight</span>
         </a>
 
         {/* Navigation Links */}

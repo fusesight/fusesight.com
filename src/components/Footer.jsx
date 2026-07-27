@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="footer-top-brand">
           <a href="#home" className="footer-logo-link">
             <Box size={24} />
-            <span>NeoVision / FuseSight</span>
+            <span>FuseSight</span>
           </a>
         </div>
 
