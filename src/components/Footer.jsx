@@ -30,7 +30,7 @@ export default function Footer() {
         {/* Links Grid & Newsletter Row */}
         <div className="footer-main-grid">
           <div className="footer-col">
-            <h5 className="col-title">Capabilities</h5>
+            <h5 className="col-title">Our Service</h5>
             <a href="#capabilities">Multi-Camera Perception</a>
             <a href="#capabilities">Scene Intelligence</a>
             <a href="#capabilities">Computer Vision Analytics</a>
@@ -49,7 +49,7 @@ export default function Footer() {
             <h5 className="col-title">Quick Links</h5>
             <a href="#home">Home</a>
             <a href="#about">Platform Overview</a>
-            <a href="#capabilities">Platform Capabilities</a>
+            <a href="#capabilities">Our Service</a>
             <a href="#contact">Contact Us</a>
           </div>
 
