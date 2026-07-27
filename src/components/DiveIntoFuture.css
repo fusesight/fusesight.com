@@ -12,7 +12,7 @@
   border-radius: 28px;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
 }
 
@@ -33,18 +33,18 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.75) 100%),
-              linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.6) 100%);
+  background: radial-gradient(circle at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%),
+              linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%);
   z-index: 2;
 }
 
 .cta-card-content {
   position: relative;
   z-index: 3;
-  padding: 60px 72px;
+  padding: 50px 72px 50px 72px;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 48px;
 }
