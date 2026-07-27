@@ -30,7 +30,7 @@ export default function Footer() {
         {/* Links Grid & Newsletter Row */}
         <div className="footer-main-grid">
           <div className="footer-col">
-            <h5 className="col-title">Our Service</h5>
+            <h5 className="col-title">Service</h5>
             <a href="#capabilities">Multi-Camera Perception</a>
             <a href="#capabilities">Scene Intelligence</a>
             <a href="#capabilities">Computer Vision Analytics</a>
@@ -49,7 +49,7 @@ export default function Footer() {
             <h5 className="col-title">Quick Links</h5>
             <a href="#home">Home</a>
             <a href="#about">Platform Overview</a>
-            <a href="#capabilities">Our Service</a>
+            <a href="#capabilities">Service</a>
             <a href="#contact">Contact Us</a>
           </div>
 
@@ -66,10 +66,10 @@ export default function Footer() {
             <p className="newsletter-desc">Subscribe to receive multi-camera perception whitepapers and AI vision release notes.</p>
 
             <form onSubmit={handleSubscribe} className="newsletter-form">
-              <input 
-                type="email" 
-                required 
-                placeholder="Enter your work email..." 
+              <input
+                type="email"
+                required
+                placeholder="Enter your work email..."
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -95,7 +95,7 @@ export default function Footer() {
           <span className="footer-partner">DeepStream AI</span>
           <span className="footer-partner">OpenCV CUDA</span>
           <span className="footer-partner">RTSP Stream Grid</span>
-          
+
           <button onClick={scrollToTop} className="back-top-btn" aria-label="Back to top">
             <ArrowUp size={16} />
           </button>
