@@ -17,14 +17,13 @@ export default function DiveIntoFuture() {
               FUTURE
             </h2>
 
-            <div className="cta-action-wrap">
-              <button className="cta-play-btn" aria-label="Watch interactive spatial demo">
-                <Play size={20} fill="#000000" />
+            <div className="cta-action-side">
+              <button className="cta-play-btn" aria-label="Play video demo">
+                <Play size={22} fill="#ffffff" color="#ffffff" className="play-icon" />
               </button>
-              <div className="cta-play-text">
-                <strong>Experience spatial intelligence now</strong>
-                <span>Watch the 4K interactive demo video</span>
-              </div>
+              <p className="cta-desc">
+                Invites you to immerse yourself in the groundbreaking world of FuseSight. Explore the limitless possibilities of futuristic technology and virtual reality.
+              </p>
             </div>
           </div>
         </div>
@@ -32,3 +31,4 @@ export default function DiveIntoFuture() {
     </section>
   );
 }
+
