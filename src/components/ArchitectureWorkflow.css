@@ -1,7 +1,7 @@
 .architecture-section {
   background-color: #0c0c0e;
   color: #ffffff;
-  padding: 100px 0 120px 0;
+  padding: var(--section-padding) 0;
   position: relative;
   border-top: 1px solid #141418;
 }
@@ -12,7 +12,7 @@
 
 .architecture-title {
   font-family: var(--font-heading), 'Inter', sans-serif;
-  font-size: 3.4rem;
+  font-size: var(--font-h2);
   font-weight: 300;
   letter-spacing: -0.5px;
   color: #ffffff;
@@ -36,6 +36,7 @@
   margin: 0 0 60px 0;
   overflow-x: auto;
   padding: 10px 0;
+  -webkit-overflow-scrolling: touch;
 }
 
 .pipeline-step-card {
@@ -104,7 +105,7 @@
   background-color: #121215;
   border: 1px solid #22222a;
   border-radius: 28px;
-  padding: 40px;
+  padding: clamp(20px, 4vw, 40px);
   color: #ffffff;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
 }
@@ -117,12 +118,12 @@
   padding-bottom: 24px;
   margin-bottom: 32px;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 16px;
 }
 
 .inspector-title {
   font-family: var(--font-heading), 'Inter', sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   font-weight: 600;
   letter-spacing: 1px;
   color: #ffffff;
@@ -132,11 +133,14 @@
 .widget-selector-tabs {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background-color: #1a1a22;
   padding: 6px;
   border-radius: 14px;
   border: 1px solid #272734;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .widget-tab-btn {
@@ -148,6 +152,7 @@
   font-size: 0.84rem;
   font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
   transition: all var(--transition-fast);
 }
 
@@ -159,7 +164,7 @@
 .widget-panel {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
+  gap: clamp(24px, 4vw, 40px);
   align-items: center;
 }
 
@@ -180,7 +185,7 @@
 
 .panel-heading {
   font-family: var(--font-heading), 'Inter', sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 500;
   color: #ffffff;
   line-height: 1.2;
@@ -262,20 +267,25 @@
   .widget-panel {
     grid-template-columns: 1fr;
   }
+}
 
+@media (max-width: 768px) {
   .workflow-pipeline {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pipeline-step-card {
+    min-width: unset;
+    width: 100%;
   }
 
   .pipeline-connector {
     transform: rotate(90deg);
+    padding: 8px 0;
   }
 
   .items-grid {
     grid-template-columns: 1fr;
-  }
-
-  .architecture-title {
-    font-size: 2.5rem;
   }
 }

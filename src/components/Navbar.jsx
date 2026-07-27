@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Search, ArrowUpRight, Box } from 'lucide-react';
+import { Search, ArrowUpRight, Box, Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,11 +20,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
   return (
-    <header className={`navbar-header ${isScrolled ? 'scrolled' : 'at-top'}`}>
+    <header className={`navbar-header ${isScrolled ? 'scrolled' : 'at-top'} ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
       <div className="container navbar-container">
         {/* Brand Logo matching FuseSight / visual theme reference */}
-        <a href="#home" className="navbar-brand">
+        <a href="#home" className="navbar-brand" onClick={closeMobileMenu}>
           <div className="brand-icon">
             <Box size={22} strokeWidth={2.2} />
           </div>
@@ -31,13 +34,25 @@ export default function Navbar() {
         </a>
 
         {/* Navigation Links */}
-        <nav className="navbar-nav">
-          <a href="#home" className="nav-link active">Home</a>
-          <a href="#about" className="nav-link">About</a>
-          <a href="#capabilities" className="nav-link">Our Service</a>
-          <a href="#architecture" className="nav-link">Architecture</a>
-          <a href="#pricing" className="nav-link">Pricing</a>
-          <a href="#contact" className="nav-link">Contact</a>
+        <nav className={`navbar-nav ${isMobileMenuOpen ? 'open' : ''}`}>
+          <a href="#home" className="nav-link active" onClick={closeMobileMenu}>Home</a>
+          <a href="#about" className="nav-link" onClick={closeMobileMenu}>About</a>
+          <a href="#capabilities" className="nav-link" onClick={closeMobileMenu}>Our Service</a>
+          <a href="#architecture" className="nav-link" onClick={closeMobileMenu}>Architecture</a>
+          <a href="#pricing" className="nav-link" onClick={closeMobileMenu}>Pricing</a>
+          <a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a>
+          
+          <div className="mobile-search-pill">
+            <input 
+              type="text" 
+              placeholder="Search capabilities..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <button className="search-btn" aria-label="Search">
+              <Search size={16} />
+            </button>
+          </div>
         </nav>
 
         {/* Search Bar & Action Buttons */}
@@ -59,10 +74,20 @@ export default function Navbar() {
             target="_blank" 
             rel="noopener noreferrer" 
             className="cta-pill-btn"
+            onClick={closeMobileMenu}
           >
             Dashboard
             <ArrowUpRight size={16} />
           </a>
+
+          {/* Mobile Hamburger Toggle Button */}
+          <button 
+            className="mobile-toggle-btn"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle Navigation Menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
     </header>

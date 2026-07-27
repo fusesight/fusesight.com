@@ -162,5 +162,20 @@
 @media (max-width: 1024px) {
   .footer-main-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 40px;
+  }
+  .footer-bottom-partners {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    text-align: center;
   }
 }

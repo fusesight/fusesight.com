@@ -1,7 +1,7 @@
 .digital-frontier-section {
   background-color: #000000;
   color: #ffffff;
-  padding: 120px 0;
+  padding: var(--section-padding) 0;
   position: relative;
   border-top: 1px solid #141417;
 }
@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 80px;
+  gap: clamp(32px, 6vw, 80px);
 }
 
 .frontier-visual {
@@ -39,7 +39,7 @@
 
 .frontier-title {
   font-family: var(--font-heading);
-  font-size: 3.8rem;
+  font-size: var(--font-h1);
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: -1.5px;
@@ -53,6 +53,9 @@
   border-bottom: 1px solid #22222a;
   padding-bottom: 12px;
   margin-bottom: 24px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 
 .frontier-tab-btn {
@@ -61,6 +64,8 @@
   color: #888899;
   position: relative;
   transition: color var(--transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .frontier-tab-btn.active {
@@ -90,6 +95,7 @@
   display: flex;
   align-items: center;
   gap: 28px;
+  flex-wrap: wrap;
 }
 
 .frontier-btn-primary {
@@ -100,6 +106,7 @@
   font-size: 0.9rem;
   font-weight: 600;
   transition: all var(--transition-fast);
+  text-align: center;
 }
 
 .frontier-btn-primary:hover {
@@ -133,9 +140,18 @@
 @media (max-width: 992px) {
   .frontier-container {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
-  .frontier-title {
-    font-size: 2.8rem;
+}
+
+@media (max-width: 576px) {
+  .frontier-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .frontier-description {
+    min-height: auto;
+    margin-bottom: 28px;
   }
 }

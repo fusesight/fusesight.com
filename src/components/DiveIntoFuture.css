@@ -1,6 +1,6 @@
 .dive-into-future-section {
   background-color: #0c0c0e;
-  padding: 100px 0 120px;
+  padding: var(--section-padding) 0;
   position: relative;
   border-top: 1px solid #141418;
 }
@@ -8,7 +8,7 @@
 .cta-video-card {
   position: relative;
   width: 100%;
-  height: 560px; /* Increased banner height for tall aspect ratio matching reference mockup */
+  height: clamp(340px, 50vh, 560px);
   border-radius: 28px;
   overflow: hidden;
   display: flex;
@@ -41,17 +41,17 @@
 .cta-card-content {
   position: relative;
   z-index: 3;
-  padding: 50px 72px 50px 72px;
+  padding: clamp(24px, 5vw, 50px) clamp(24px, 6vw, 72px);
   width: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 48px;
+  gap: clamp(24px, 4vw, 48px);
 }
 
 .cta-title {
   font-family: var(--font-heading), 'Inter', sans-serif;
-  font-size: 3.8rem;
+  font-size: var(--font-h1);
   font-weight: 300;
   line-height: 1.05;
   letter-spacing: -0.5px;
@@ -98,31 +98,23 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
-  .cta-video-card {
-    height: 480px;
-  }
-  .cta-card-content {
-    padding: 48px;
-  }
-  .cta-title {
-    font-size: 3rem;
-  }
-}
-
 @media (max-width: 768px) {
-  .cta-video-card {
-    height: 420px;
-  }
   .cta-card-content {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    padding: 36px;
-    gap: 28px;
   }
-  .cta-title {
-    font-size: 2.4rem;
+}
+
+@media (max-width: 480px) {
+  .cta-action-side {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .cta-play-btn {
+    width: 52px;
+    height: 52px;
   }
 }
 

@@ -25,6 +25,17 @@
   --font-heading: 'Space Grotesk', 'Inter', sans-serif;
   --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
 
+  /* Typography Scales */
+  --font-hero: clamp(2.2rem, 5.5vw, 4.4rem);
+  --font-h1: clamp(2rem, 4.5vw, 3.8rem);
+  --font-h2: clamp(1.8rem, 4vw, 3.4rem);
+  --font-h3: clamp(1.4rem, 3vw, 2.2rem);
+  --font-subheading: clamp(1rem, 2vw, 1.25rem);
+
+  /* Responsive Spacing & Layout Tokens */
+  --container-padding: clamp(16px, 4vw, 32px);
+  --section-padding: clamp(60px, 8vw, 120px);
+
   /* Shadows & Effects */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);

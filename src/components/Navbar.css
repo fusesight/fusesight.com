@@ -152,11 +152,109 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
+/* Mobile Menu Toggle Button */
+.mobile-toggle-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mobile-toggle-btn:hover {
+  background: #eaeaea;
+}
+
+.mobile-search-pill {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .search-pill {
     display: none;
   }
+
+  .mobile-toggle-btn {
+    display: flex;
+  }
+
+  .navbar-header.mobile-open {
+    background-color: var(--bg-main);
+  }
+
   .navbar-nav {
-    gap: 18px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    background-color: rgba(245, 245, 247, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 32px 24px;
+    gap: 20px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 999;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .navbar-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-link {
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .mobile-search-pill {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 999px;
+    padding: 10px 16px;
+    margin-top: 12px;
+  }
+
+  .mobile-search-pill input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 0.95rem;
+    color: var(--text-main);
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-pill-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  .navbar-brand {
+    font-size: 1.15rem;
+  }
+  .brand-icon {
+    width: 32px;
+    height: 32px;
   }
 }
