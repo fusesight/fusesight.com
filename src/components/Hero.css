@@ -61,8 +61,18 @@
   line-height: 1.02;
   letter-spacing: -2px;
   color: var(--text-main);
-  margin-bottom: 36px;
+  margin-bottom: 16px;
   position: relative;
+}
+
+.hero-tagline-quote {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 28px;
+  letter-spacing: -0.2px;
 }
 
 .title-digital-wrap {

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import DigitalFrontier from './components/DigitalFrontier';
 import OurServices from './components/OurServices';
+import ArchitectureWorkflow from './components/ArchitectureWorkflow';
 import LimitlessPossibilities from './components/LimitlessPossibilities';
 import VoicesOfFuture from './components/VoicesOfFuture';
 import DiveIntoFuture from './components/DiveIntoFuture';
@@ -18,6 +19,7 @@ export default function App() {
         <Hero />
         <DigitalFrontier />
         <OurServices />
+        <ArchitectureWorkflow />
         <LimitlessPossibilities />
         <VoicesOfFuture />
         <DiveIntoFuture />

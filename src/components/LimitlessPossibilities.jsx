@@ -3,26 +3,26 @@ import possibilitiesImg from '../assets/possibilities-model.png';
 import './LimitlessPossibilities.css';
 
 export default function LimitlessPossibilities() {
-  const [activeTab, setActiveTab] = useState('Innovation');
+  const [activeTab, setActiveTab] = useState('Industrial');
 
   const articles = {
-    Innovation: {
-      title: 'How VR is Transforming Our Digital World',
-      description: 'Virtual Reality (VR) is no longer a concept of the future—it\'s a reality reshaping how we interact, work, and entertain ourselves.',
-      author: 'Henry Leonardo',
-      date: '08 February 2025'
+    Industrial: {
+      title: 'Industrial Facilities & Manufacturing',
+      description: 'Multi-camera vision streams monitor high-speed assembly lines, machine safety zones, and hazardous areas to prevent costly operational downtime.',
+      author: 'Industrial Safety Standard',
+      date: 'Enterprise Grade'
     },
-    Technology: {
-      title: 'Sub-50ms Real-time Spatial Synchronization',
-      description: 'An architectural deep dive into low-latency WebSockets, gRPC, and GPU spatial telemetry for real-time multiplayer worlds.',
-      author: 'Elena Rostova',
-      date: '14 February 2025'
+    'Smart Space': {
+      title: 'Smart Buildings & Security Operations',
+      description: 'Synchronized multi-angle perception provides real-time occupancy heatmaps, perimeter tracking, and automated visual alert notifications.',
+      author: 'SOC Infrastructure',
+      date: 'Real-Time SLA'
     },
-    Experience: {
-      title: 'Next-Gen Immersive Spatial Intelligence',
-      description: 'Explore how spatial multi-camera perception elevates user experiences across enterprise and visual simulation environments.',
-      author: 'Marcus Vance',
-      date: '20 February 2025'
+    Logistics: {
+      title: 'Logistics Environments & Research Hubs',
+      description: 'Track autonomous mobile robots (AMRs), warehouse inventory flows, and loading dock activities across complex multi-floor visual spaces.',
+      author: 'Supply Chain Vision',
+      date: 'Edge Ready'
     }
   };
 
@@ -33,7 +33,7 @@ export default function LimitlessPossibilities() {
       <div className="container possibilities-container">
         {/* Main Title at Top */}
         <h2 className="possibilities-heading">
-          LIMITLESS POSSIBILITIES <br />
+          TARGET ENTERPRISE VERTICALS <br />
           WITH FUSESIGHT
         </h2>
 
@@ -41,7 +41,7 @@ export default function LimitlessPossibilities() {
         <div className="possibilities-grid">
           {/* Column 1: Vertical Navigation Tabs */}
           <div className="possibilities-tabs">
-            {['Innovation', 'Technology', 'Experience'].map((tab) => (
+            {['Industrial', 'Smart Space', 'Logistics'].map((tab) => (
               <button
                 key={tab}
                 className={`v-tab-btn ${activeTab === tab ? 'active' : ''}`}
@@ -56,7 +56,7 @@ export default function LimitlessPossibilities() {
           <div className="possibilities-image-card">
             <img
               src={possibilitiesImg}
-              alt="VR Visor Model"
+              alt="FuseSight Perception Visor Model"
               className="possibilities-img"
             />
           </div>
@@ -66,8 +66,8 @@ export default function LimitlessPossibilities() {
             <div className="content-body">
               <h3 className="article-title">{currentArticle.title}</h3>
               <p className="article-desc">{currentArticle.description}</p>
-              <a href="#learn-more" className="learn-more-btn">
-                Learn More
+              <a href="#contact" className="learn-more-btn">
+                Deploy Solutions
               </a>
             </div>
 

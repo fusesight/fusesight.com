@@ -30,39 +30,40 @@ export default function Footer() {
         {/* Links Grid & Newsletter Row */}
         <div className="footer-main-grid">
           <div className="footer-col">
-            <h5 className="col-title">Product</h5>
-            <a href="#about">Force Development</a>
-            <a href="#about">Digital Assistance</a>
-            <a href="#services">Gaming Solutions</a>
+            <h5 className="col-title">Capabilities</h5>
+            <a href="#capabilities">Multi-Camera Perception</a>
+            <a href="#capabilities">Scene Intelligence</a>
+            <a href="#capabilities">Computer Vision Analytics</a>
+            <a href="#capabilities">Intelligent Monitoring</a>
           </div>
 
           <div className="footer-col">
-            <h5 className="col-title">Infrastructure</h5>
-            <a href="#about">Spatial Grid SLA</a>
-            <a href="#about">Zero-Trust Security</a>
-            <a href="#pricing">Super Tier ($29)</a>
-            <a href="#pricing">Master Tier ($99)</a>
+            <h5 className="col-title">Architecture</h5>
+            <a href="#architecture">Input Source Layer</a>
+            <a href="#architecture">AI Perception Workflow</a>
+            <a href="#architecture">Command Center Dashboard</a>
+            <a href="#pricing">Licensing & Tiers</a>
           </div>
 
           <div className="footer-col">
             <h5 className="col-title">Quick Links</h5>
             <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Blog & News</a>
+            <a href="#about">Platform Overview</a>
+            <a href="#capabilities">Platform Capabilities</a>
+            <a href="#contact">Contact Us</a>
           </div>
 
           <div className="footer-col">
             <h5 className="col-title">Access</h5>
-            <a href="http://localhost:3001" target="_blank" rel="noopener noreferrer">Dashboard</a>
-            <a href="#contact">Documentation</a>
-            <a href="#contact">System Status</a>
+            <a href="http://localhost:3001" target="_blank" rel="noopener noreferrer">Live Dashboard</a>
+            <a href="#pricing">Pricing & Licensing</a>
+            <a href="#contact">Enterprise Support</a>
           </div>
 
           {/* Newsletter Box Right Column */}
           <div className="footer-col newsletter-col">
-            <h5 className="col-title">FLOW INTO FUTURE NEWSLETTER</h5>
-            <p className="newsletter-desc">Subscribe to receive monthly spatial computing whitepapers and LLM agent release notes.</p>
+            <h5 className="col-title">FUSESIGHT VISION NEWSLETTER</h5>
+            <p className="newsletter-desc">Subscribe to receive multi-camera perception whitepapers and AI vision release notes.</p>
 
             <form onSubmit={handleSubscribe} className="newsletter-form">
               <input 
@@ -79,7 +80,7 @@ export default function Footer() {
 
             {subscribed && <span className="newsletter-success">Subscribed successfully!</span>}
 
-            {/* Social Icons Row matching image */}
+            {/* Social Icons Row */}
             <div className="footer-social-icons">
               <a href="#telegram" aria-label="Telegram"><MessageCircle size={18} /></a>
               <a href="#twitter" aria-label="Twitter"><Twitter size={18} /></a>
@@ -90,10 +91,10 @@ export default function Footer() {
 
         {/* Bottom Horizontal Partner Logos Row matching Image */}
         <div className="footer-bottom-partners">
-          <span className="footer-partner">logoipsum</span>
-          <span className="footer-partner">logoipsum</span>
-          <span className="footer-partner">logoipsum</span>
-          <span className="footer-partner">logoipsum</span>
+          <span className="footer-partner">NVIDIA Jetson</span>
+          <span className="footer-partner">DeepStream AI</span>
+          <span className="footer-partner">OpenCV CUDA</span>
+          <span className="footer-partner">RTSP Stream Grid</span>
           
           <button onClick={scrollToTop} className="back-top-btn" aria-label="Back to top">
             <ArrowUp size={16} />

@@ -27,9 +27,9 @@ export default function Contact() {
           {/* Contact Details Left Column */}
           <div className="contact-info-col">
             <div className="section-tag inverse">GET IN TOUCH</div>
-            <h2 className="contact-title">Ready to Initialize Your Spatial Future?</h2>
+            <h2 className="contact-title">Ready to Initialize Multi-Camera AI Perception?</h2>
             <p className="contact-desc">
-              Speak directly with our spatial engineering team. We typically respond within 2 business hours.
+              Speak directly with our visual intelligence engineering team. We typically respond within 2 business hours.
             </p>
 
             <div className="contact-methods">
@@ -37,7 +37,7 @@ export default function Contact() {
                 <div className="method-icon"><Mail size={20} /></div>
                 <div>
                   <span className="method-label">Direct Line</span>
-                  <p className="method-value">hello@fusesight.com</p>
+                  <p className="method-value">contact@fusesight.com</p>
                 </div>
               </div>
 
@@ -53,7 +53,7 @@ export default function Contact() {
                 <div className="method-icon"><MapPin size={20} /></div>
                 <div>
                   <span className="method-label">Headquarters</span>
-                  <p className="method-value">700 Spatial Way, Silicon Valley, CA</p>
+                  <p className="method-value">700 Vision Way, Silicon Valley, CA</p>
                 </div>
               </div>
             </div>
@@ -94,15 +94,15 @@ export default function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="plan">Interested Plan</label>
+                  <label htmlFor="plan">Interested Plan / Integration</label>
                   <select 
                     id="plan"
                     value={formData.plan}
                     onChange={(e) => setFormData({...formData, plan: e.target.value})}
                   >
-                    <option value="Super Plan ($29/mo)">Super Plan ($29/mo)</option>
-                    <option value="Master Plan ($99/mo)">Master Plan ($99/mo) — Recommended</option>
-                    <option value="Custom Enterprise">Custom Enterprise Plan</option>
+                    <option value="Standard Edge Plan ($29/mo)">Standard Edge Plan ($29/mo)</option>
+                    <option value="Master Enterprise Plan ($99/mo)">Master Enterprise Plan ($99/mo) — Recommended</option>
+                    <option value="Custom AI Vision Solution">Custom AI Vision Solution</option>
                   </select>
                 </div>
 

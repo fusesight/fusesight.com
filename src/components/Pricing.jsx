@@ -9,10 +9,10 @@ export default function Pricing() {
     <section id="pricing" className="pricing-section">
       <div className="container">
         <div className="section-header center">
-          <div className="section-tag">TRANSPARENT PRICING</div>
-          <h2 className="section-title">Select Your Power Tier</h2>
+          <div className="section-tag">SAAS & LICENSING PLANS</div>
+          <h2 className="section-title">Select Your Visual Intelligence Tier</h2>
           <p className="section-subtitle">
-            Choose between our core Super Plan and full-spectrum Master Plan with zero hidden fees.
+            Flexible multi-camera perception packages engineered for facilities, security teams, and enterprise operations.
           </p>
 
           {/* Billing Switch Toggle */}
@@ -31,17 +31,17 @@ export default function Pricing() {
           </div>
         </div>
 
-        {/* Two Tier Plans Side by Side: Super Plan ($29) & Master Plan ($99) */}
+        {/* Two Tier Plans Side by Side: Standard Edge Plan ($29) & Master Enterprise Plan ($99) */}
         <div className="pricing-grid">
-          {/* SUPER PLAN CARD */}
+          {/* STANDARD EDGE PLAN CARD */}
           <div className="pricing-card super-plan">
             <div className="card-top">
               <div className="plan-badge">
                 <Zap size={16} />
-                <span>SUPER PLAN</span>
+                <span>STANDARD EDGE PLAN</span>
               </div>
-              <h3 className="plan-name">Super</h3>
-              <p className="plan-desc">Perfect for scaling teams & emerging AI startups.</p>
+              <h3 className="plan-name">Standard Edge</h3>
+              <p className="plan-desc">Ideal for single facilities & localized camera networks.</p>
               
               <div className="price-wrap">
                 <span className="currency">$</span>
@@ -53,16 +53,16 @@ export default function Pricing() {
             <div className="card-divider"></div>
 
             <ul className="plan-features">
-              <li><Check size={18} className="check-icon" /> Up to 5 Active AI Projects</li>
-              <li><Check size={18} className="check-icon" /> 10 GB High-Speed Storage</li>
-              <li><Check size={18} className="check-icon" /> Standard Real-Time Telemetry</li>
+              <li><Check size={18} className="check-icon" /> Up to 8 Active Camera Feeds</li>
+              <li><Check size={18} className="check-icon" /> Multi-Camera Perception Engine</li>
+              <li><Check size={18} className="check-icon" /> Real-Time Object & Event Detection</li>
+              <li><Check size={18} className="check-icon" /> Standard Visual Analytics Dashboard</li>
+              <li><Check size={18} className="check-icon" /> REST API Key & RTSP Stream Access</li>
               <li><Check size={18} className="check-icon" /> Email & Community Support</li>
-              <li><Check size={18} className="check-icon" /> REST API Key Access</li>
-              <li><Check size={18} className="check-icon" /> 99.9% Uptime Guarantee</li>
             </ul>
 
-            <a href="http://localhost:3001" className="plan-btn plan-btn-outlined">
-              Get Super Tier
+            <a href="http://localhost:3001" target="_blank" rel="noopener noreferrer" className="plan-btn plan-btn-outlined">
+              Deploy Standard Edge
             </a>
           </div>
 
@@ -76,10 +76,10 @@ export default function Pricing() {
             <div className="card-top">
               <div className="plan-badge master">
                 <Sparkles size={16} />
-                <span>MASTER PLAN</span>
+                <span>MASTER ENTERPRISE PLAN</span>
               </div>
-              <h3 className="plan-name">Master</h3>
-              <p className="plan-desc">For enterprise workloads & unrestricted spatial power.</p>
+              <h3 className="plan-name">Master Enterprise</h3>
+              <p className="plan-desc">For large-scale multi-facility vision grids & Jetson deployments.</p>
 
               <div className="price-wrap">
                 <span className="currency">$</span>
@@ -91,17 +91,17 @@ export default function Pricing() {
             <div className="card-divider dark"></div>
 
             <ul className="plan-features">
-              <li><Check size={18} className="check-icon master" /> <strong>Unlimited</strong> AI & Spatial Projects</li>
-              <li><Check size={18} className="check-icon master" /> <strong>100 GB</strong> Dedicated Storage</li>
-              <li><Check size={18} className="check-icon master" /> Advanced Predictive Analytics & AI Insights</li>
-              <li><Check size={18} className="check-icon master" /> 24/7 Priority SLA Support</li>
-              <li><Check size={18} className="check-icon master" /> Full REST & gRPC API + Webhooks</li>
-              <li><Check size={18} className="check-icon master" /> Custom Integrations & White-Label Option</li>
-              <li><Check size={18} className="check-icon master" /> Team Collaboration (Up to 25 Members)</li>
+              <li><Check size={18} className="check-icon master" /> <strong>Unlimited</strong> Camera Streams & Feeds</li>
+              <li><Check size={18} className="check-icon master" /> <strong>Full AI Scene Intelligence</strong> Platform</li>
+              <li><Check size={18} className="check-icon master" /> NVIDIA Jetson & DeepStream Hardware Support</li>
+              <li><Check size={18} className="check-icon master" /> 24/7 Priority SLA & On-Site Assistance</li>
+              <li><Check size={18} className="check-icon master" /> Full REST, gRPC API & Webhook Triggers</li>
+              <li><Check size={18} className="check-icon master" /> Custom AI Model Training & White-Label Option</li>
+              <li><Check size={18} className="check-icon master" /> Command Center Dashboard Access</li>
             </ul>
 
-            <a href="http://localhost:3001" className="plan-btn plan-btn-solid">
-              Get Master Tier
+            <a href="http://localhost:3001" target="_blank" rel="noopener noreferrer" className="plan-btn plan-btn-solid">
+              Get Master Enterprise
               <ArrowRight size={18} />
             </a>
           </div>

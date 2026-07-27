@@ -34,7 +34,8 @@ export default function Navbar() {
         <nav className="navbar-nav">
           <a href="#home" className="nav-link active">Home</a>
           <a href="#about" className="nav-link">About</a>
-          <a href="#services" className="nav-link">Services</a>
+          <a href="#capabilities" className="nav-link">Capabilities</a>
+          <a href="#architecture" className="nav-link">Architecture</a>
           <a href="#pricing" className="nav-link">Pricing</a>
           <a href="#contact" className="nav-link">Contact</a>
         </nav>

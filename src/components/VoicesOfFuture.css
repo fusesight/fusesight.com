@@ -108,6 +108,14 @@
   color: #ffffff;
 }
 
+.author-role {
+  font-size: 0.78rem;
+  color: #38bdf8;
+  display: block;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
 .avatar-circle-col {
   flex-shrink: 0;
 }

@@ -5,20 +5,23 @@ export default function VoicesOfFuture() {
   const testimonials = [
     {
       id: 1,
-      quote: "FuseSight completely transformed the way I interact with virtual reality.",
+      quote: "FuseSight unified our 60+ plant cameras into a single AI perception grid. Missed events are down to zero.",
       name: "James Rizaki",
+      role: "VP of Plant Operations",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
     },
     {
       id: 2,
-      quote: "Our team has adopted FuseSight's VR collaboration tools.",
+      quote: "The multi-camera fusion engine detects perimeter anomalies across 4 camera feeds instantly with sub-15ms latency.",
       name: "Samantha Leonardo",
+      role: "Chief Security Officer",
       avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
     },
     {
       id: 3,
-      quote: "I've been gaming in VR for years, but FuseSight's technology is unmatched.",
+      quote: "Deploying FuseSight on NVIDIA Jetson edge nodes allowed us to automate visual quality monitoring without cloud delays.",
       name: "Mark Trevor",
+      role: "Lead Automation Engineer",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
     }
   ];
@@ -52,13 +55,13 @@ export default function VoicesOfFuture() {
         {/* Left Column: Title & Subtitle Description */}
         <div className="voices-left">
           <h2 className="voices-title">
-            VOICES OF THE <br />
-            FUTURE
+            VOICES OF <br />
+            INTELLIGENCE
           </h2>
           <div className="title-accent-line"></div>
 
           <p className="voices-desc">
-            Here, you'll hear firsthand from users, pioneers, and tech enthusiasts who are shaping the next generation of virtual reality and futuristic technology. Explore their stories and discover how we are transforming the way we interact with the digital world.
+            Discover how security directors, operations leads, and automation engineers leverage FuseSight multi-camera perception and AI vision to eliminate monitoring blind spots across facilities.
           </p>
         </div>
 
@@ -68,8 +71,9 @@ export default function VoicesOfFuture() {
             {testimonials.map((item) => (
               <div key={item.id} className="voice-quote-card">
                 <div className="quote-content-col">
-                  <p className="quote-text">{item.quote}</p>
+                  <p className="quote-text">"{item.quote}"</p>
                   <h4 className="author-name">{item.name}</h4>
+                  <span className="author-role">{item.role}</span>
                 </div>
 
                 <div className="avatar-circle-col">
