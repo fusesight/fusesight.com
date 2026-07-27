@@ -56,15 +56,15 @@
 
 .pipeline-step-card:hover {
   transform: translateY(-6px);
-  border-color: #38bdf8;
-  box-shadow: 0 16px 40px rgba(56, 189, 248, 0.12);
+  border-color: #3a3a48;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
 }
 
 .step-num-badge {
   font-family: var(--font-heading), 'Inter', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #38bdf8;
+  color: #a1a1aa;
   letter-spacing: 1px;
   margin-bottom: 14px;
 }
@@ -91,7 +91,7 @@
 }
 
 .pipeline-connector {
-  color: #38bdf8;
+  color: #888899;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,7 +174,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #38bdf8;
+  color: #a1a1aa;
   text-transform: uppercase;
 }
 
@@ -232,7 +232,7 @@
 }
 
 .item-icon {
-  color: #38bdf8;
+  color: #ffffff;
   flex-shrink: 0;
 }
 
@@ -254,7 +254,7 @@
 
 .dash-metric-desc {
   font-size: 0.78rem;
-  color: #38bdf8;
+  color: #a1a1aa;
   font-weight: 500;
 }
 

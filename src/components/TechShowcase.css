@@ -18,7 +18,7 @@
   gap: 8px;
   background-color: #121824;
   border: 1px solid #1e293b;
-  color: #38bdf8;
+  color: #a1a1aa;
   padding: 8px 16px;
   border-radius: 30px;
   font-family: var(--font-heading);
@@ -83,8 +83,8 @@
 }
 
 .compat-pill:hover {
-  border-color: #38bdf8;
-  color: #38bdf8;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 .sdk-grid {
@@ -131,8 +131,8 @@
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #38bdf8;
-  background-color: #0c2035;
+  color: #a1a1aa;
+  background-color: #1a1a26;
   padding: 4px 10px;
   border-radius: 6px;
   text-transform: uppercase;
@@ -167,7 +167,7 @@
 }
 
 .sdk-card:hover .doc-link-text {
-  color: #38bdf8;
+  color: #ffffff;
 }
 
 @media (max-width: 1024px) {
