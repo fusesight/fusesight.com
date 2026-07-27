@@ -62,6 +62,9 @@ export default function OurServices() {
         <div className="our-services-header">
           <div className="header-title-group">
             <h2 className="our-services-title">OUR SERVICE</h2>
+            <p className="our-services-subtitle">
+              Explore FuseSight's core multi-camera perception layers engineered for enterprise vision intelligence.
+            </p>
           </div>
 
           <div className="carousel-controls">

@@ -20,6 +20,15 @@
   letter-spacing: -0.5px;
   color: #ffffff;
   text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.our-services-subtitle {
+  font-family: var(--font-body), 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #888899;
+  max-width: 480px;
+  line-height: 1.5;
 }
 
 .carousel-controls {
