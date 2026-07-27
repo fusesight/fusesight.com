@@ -235,7 +235,8 @@
   background-color: #000000;
   color: var(--text-inverse);
   margin-top: 15px;
-  padding: 40px 0 45px 0;
+  margin-bottom: -40px;
+  padding: 40px 0 85px 0;
   position: relative;
   z-index: 10;
   /* Step-down angular cut matching Image 1 */

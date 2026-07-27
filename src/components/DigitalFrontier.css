@@ -3,7 +3,7 @@
   color: #ffffff;
   padding: var(--section-padding) 0;
   position: relative;
-  border-top: 1px solid #141417;
+  border-top: none;
 }
 
 .frontier-container {
