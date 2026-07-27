@@ -30,12 +30,13 @@ export default function ArchitectureWorkflow() {
     <section id="architecture" className="architecture-section">
       <div className="container">
         {/* Header */}
-        <div className="section-header center">
-          <div className="section-tag">TECHNICAL ARCHITECTURE</div>
-          <h2 className="section-title">End-to-End Visual Perception Flow</h2>
-          <p className="section-subtitle">
-            How FuseSight combines distributed visual sources into a single unified AI intelligence layer.
-          </p>
+        <div className="architecture-header">
+          <div className="header-title-group">
+            <h2 className="architecture-title">TECHNICAL ARCHITECTURE</h2>
+            <p className="architecture-subtitle">
+              How FuseSight combines distributed visual sources into a single unified AI intelligence layer.
+            </p>
+          </div>
         </div>
 
         {/* Visual Flow Pipeline Diagram */}
