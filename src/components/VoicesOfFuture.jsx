@@ -5,32 +5,47 @@ export default function VoicesOfFuture() {
   const testimonials = [
     {
       id: 1,
-      quote: "FuseSight has completely revolutionized how our team visualizes spatial telemetric data. Master tier AI agent orchestration saved us hundreds of engineering hours.",
-      name: "Janette Hayes",
-      role: "VP of Product",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=140&q=80"
+      quote: "FuseSight completely transformed the way I interact with virtual reality.",
+      name: "James Rizaki",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
     },
     {
       id: 2,
-      quote: "The low latency and sub-50ms sync between our spatial VR headsets and executive dashboards is unprecedented. Super tier got us started, Master tier scaled us globally.",
-      name: "Samantha Vance",
-      role: "Chief Architect",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=140&q=80"
+      quote: "Our team has adopted FuseSight's VR collaboration tools.",
+      name: "Samantha Leonardo",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
     },
     {
       id: 3,
-      quote: "Minimal, ultra-clean UI paired with brutal processing speed. FuseSight is the defining spatial intelligence OS of our era.",
-      name: "Ethan Thorne",
-      role: "Founder & CEO",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=140&q=80"
+      quote: "I've been gaming in VR for years, but FuseSight's technology is unmatched.",
+      name: "Mark Trevor",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
     }
   ];
 
   return (
     <section className="voices-of-future-section">
-      {/* Background SVG Wave Accent matching Section 5 in Image */}
-      <svg className="wave-bg-accent" viewBox="0 0 1440 200" fill="none">
-        <path d="M0 100 C 360 20, 720 180, 1440 80" stroke="#1f1f28" strokeWidth="2" fill="none" />
+      {/* Prominent Background Wave Ribbon flowing across section */}
+      <svg
+        className="wave-bg-accent"
+        viewBox="0 0 1440 600"
+        preserveAspectRatio="none"
+        fill="none"
+      >
+        <defs>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#1a1a22" />
+            <stop offset="45%" stopColor="#323242" />
+            <stop offset="100%" stopColor="#1a1a22" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M -60 480 C 360 570, 720 280, 1500 390"
+          stroke="url(#waveGradient)"
+          strokeWidth="34"
+          fill="none"
+          strokeLinecap="round"
+        />
       </svg>
 
       <div className="container voices-container">
@@ -43,19 +58,18 @@ export default function VoicesOfFuture() {
           <div className="title-accent-line"></div>
 
           <p className="voices-desc">
-            Hear directly from industry leaders, spatial architects, and AI pioneers who are transforming their enterprise workflows using FuseSight digital universe solutions.
+            Here, you'll hear firsthand from users, pioneers, and tech enthusiasts who are shaping the next generation of virtual reality and futuristic technology. Explore their stories and discover how we are transforming the way we interact with the digital world.
           </p>
         </div>
 
-        {/* Right Column: 3 Stacked Cards with Quote on Left, Avatar Circle on Right */}
+        {/* Right Column: 3 Stacked Testimonial Cards */}
         <div className="voices-right">
           <div className="stacked-quotes-list">
             {testimonials.map((item) => (
               <div key={item.id} className="voice-quote-card">
                 <div className="quote-content-col">
-                  <p className="quote-text">"{item.quote}"</p>
+                  <p className="quote-text">{item.quote}</p>
                   <h4 className="author-name">{item.name}</h4>
-                  <span className="author-role">{item.role}</span>
                 </div>
 
                 <div className="avatar-circle-col">
@@ -69,3 +83,4 @@ export default function VoicesOfFuture() {
     </section>
   );
 }
+
