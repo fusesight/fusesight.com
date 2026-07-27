@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
 import possibilitiesImg from '../assets/possibilities-model.png';
 import './LimitlessPossibilities.css';
 
@@ -9,21 +8,21 @@ export default function LimitlessPossibilities() {
   const articles = {
     Innovation: {
       title: 'How VR is Transforming Our Digital World',
-      description: 'Discover how modern spatial headsets and AI avatars are reshaping communication, remote enterprise work, and spatial UI interactions.',
-      author: 'Alex Rivers',
-      date: '18th Jan 2026'
+      description: 'Virtual Reality (VR) is no longer a concept of the future—it\'s a reality reshaping how we interact, work, and entertain ourselves.',
+      author: 'Henry Leonardo',
+      date: '08 February 2025'
     },
     Technology: {
       title: 'Sub-50ms Real-time Spatial Synchronization',
       description: 'An architectural deep dive into low-latency WebSockets, gRPC, and GPU spatial telemetry for real-time multiplayer worlds.',
       author: 'Elena Rostova',
-      date: '14th Jan 2026'
+      date: '14 February 2025'
     },
-    'Contact Us': {
-      title: 'Custom Spatial Intelligence for Enterprise',
-      description: 'Learn how FuseSight custom deploys autonomous agent clusters and zero-trust security for Fortune 500 infrastructure.',
+    Experience: {
+      title: 'Next-Gen Immersive Spatial Intelligence',
+      description: 'Explore how spatial multi-camera perception elevates user experiences across enterprise and visual simulation environments.',
       author: 'Marcus Vance',
-      date: '10th Jan 2026'
+      date: '20 February 2025'
     }
   };
 
@@ -32,15 +31,17 @@ export default function LimitlessPossibilities() {
   return (
     <section className="limitless-possibilities-section">
       <div className="container possibilities-container">
-        {/* Left Column: Title & Vertical Navigation Tabs */}
-        <div className="possibilities-left">
-          <h2 className="possibilities-title">
-            LIMITLESS POSSIBILITIES <br />
-            WITH FUSESIGHT
-          </h2>
+        {/* Main Title at Top */}
+        <h2 className="possibilities-heading">
+          LIMITLESS POSSIBILITIES <br />
+          WITH FUSESIGHT
+        </h2>
 
-          <div className="vertical-tabs-list">
-            {['Innovation', 'Technology', 'Contact Us'].map((tab) => (
+        {/* 3-Column Layout: Tabs, Center Image Card, Right Content */}
+        <div className="possibilities-grid">
+          {/* Column 1: Vertical Navigation Tabs */}
+          <div className="possibilities-tabs">
+            {['Innovation', 'Technology', 'Experience'].map((tab) => (
               <button
                 key={tab}
                 className={`v-tab-btn ${activeTab === tab ? 'active' : ''}`}
@@ -50,26 +51,29 @@ export default function LimitlessPossibilities() {
               </button>
             ))}
           </div>
-        </div>
 
-        {/* Right Column: Featured Article Card with VR Visor Image */}
-        <div className="possibilities-right">
-          <div className="article-card">
-            <div className="article-image-box">
-              <img src={possibilitiesImg} alt="VR Visor Model" className="article-img" />
-            </div>
+          {/* Column 2: Center Image Card */}
+          <div className="possibilities-image-card">
+            <img
+              src={possibilitiesImg}
+              alt="VR Visor Model"
+              className="possibilities-img"
+            />
+          </div>
 
-            <div className="article-content">
+          {/* Column 3: Right Text Content & Metadata */}
+          <div className="possibilities-content">
+            <div className="content-body">
               <h3 className="article-title">{currentArticle.title}</h3>
               <p className="article-desc">{currentArticle.description}</p>
+              <a href="#learn-more" className="learn-more-btn">
+                Learn More
+              </a>
+            </div>
 
-              <div className="article-footer">
-                <span className="author-name">{currentArticle.author}</span>
-                <span className="article-date">{currentArticle.date}</span>
-                <a href="#contact" className="read-article-link">
-                  Read Article <ArrowRight size={14} />
-                </a>
-              </div>
+            <div className="article-meta-footer">
+              <span className="article-date">{currentArticle.date}</span>
+              <span className="article-author">{currentArticle.author}</span>
             </div>
           </div>
         </div>
@@ -77,3 +81,4 @@ export default function LimitlessPossibilities() {
     </section>
   );
 }
+
