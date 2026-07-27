@@ -195,7 +195,8 @@
   position: relative;
   max-width: 480px;
   width: 100%;
-  z-index: 3;
+  z-index: 15;
+  margin-bottom: -45px;
 }
 
 .hero-main-img {
@@ -233,12 +234,12 @@
 .hero-dark-section {
   background-color: #000000;
   color: var(--text-inverse);
-  margin-top: -65px;
-  padding: 50px 0 60px 0;
+  margin-top: 15px;
+  padding: 40px 0 45px 0;
   position: relative;
   z-index: 10;
   /* Step-down angular cut matching Image 1 */
-  clip-path: polygon(0 0, 42% 0, 54% 50px, 100% 50px, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 42% 0, 54% 35px, 100% 35px, 100% 100%, 0 100%);
 }
 
 .dark-section-container {
