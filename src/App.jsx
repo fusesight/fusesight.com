@@ -22,8 +22,8 @@ export default function App() {
         <ArchitectureWorkflow />
         <LimitlessPossibilities />
         <VoicesOfFuture />
-        <Pricing />
         <DiveIntoFuture />
+        <Pricing />
         <Contact />
       </main>
       <Footer />
