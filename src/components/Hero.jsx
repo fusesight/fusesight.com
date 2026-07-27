@@ -18,18 +18,7 @@ export default function Hero() {
           </div>
 
           <h1 className="hero-title">
-            <span className="title-digital-wrap">
-              UNIFIED VISUAL
-              {/* Cursive orbital loop flourish matching reference image */}
-              <svg className="orbital-loop-svg" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path 
-                  d="M10 65 C 80 10, 240 -10, 310 35 C 280 60, 160 70, 80 45" 
-                  stroke="#111111" 
-                  strokeWidth="1.8" 
-                  strokeLinecap="round" 
-                />
-              </svg>
-            </span>
+            UNIFIED VISUAL
             <br />
             INTELLIGENCE
           </h1>
