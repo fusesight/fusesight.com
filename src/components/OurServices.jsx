@@ -1,82 +1,103 @@
-import React from 'react';
-import { Camera, Eye, Cpu, Activity, LayoutDashboard, CheckCircle2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { Camera, Eye, Cpu, Activity, LayoutDashboard, ChevronLeft, ChevronRight } from 'lucide-react';
 import './OurServices.css';
 
 export default function OurServices() {
+  const [startIndex, setStartIndex] = useState(0);
+
   const capabilities = [
     {
       id: 1,
-      icon: <Camera size={24} />,
+      icon: <Camera size={22} />,
       title: 'Multi-Camera Perception Engine',
       description: 'Combines visual information from multiple camera sources into a connected perception grid.',
-      features: ['Camera Stream Integration', 'Multi-View Analysis', 'Scene Understanding', 'Visual Data Fusion', 'Real-Time Perception']
+      link: '#architecture'
     },
     {
       id: 2,
-      icon: <Eye size={24} />,
+      icon: <Eye size={22} />,
       title: 'Scene Intelligence Platform',
       description: 'Understands complex activities, spatial relationships, and operational environments through AI vision.',
-      features: ['Scene Classification', 'Activity Recognition', 'Object Tracking', 'Environmental Analysis', 'Context Awareness']
+      link: '#architecture'
     },
     {
       id: 3,
-      icon: <Cpu size={24} />,
+      icon: <Cpu size={22} />,
       title: 'Computer Vision Analytics Engine',
       description: 'Extracts deep structured metadata, patterns, and actionable insights from raw visual streams.',
-      features: ['Object Detection', 'Pattern Recognition', 'Visual Monitoring', 'Event Identification', 'Image-Based Insights']
+      link: '#architecture'
     },
     {
       id: 4,
-      icon: <Activity size={24} />,
+      icon: <Activity size={22} />,
       title: 'Intelligent Monitoring System',
       description: 'Provides enhanced visibility, proactive visual alert triggers, and spatial tracking across environments.',
-      features: ['Live Camera Analytics', 'Visual Alerts', 'Activity Tracking', 'Operational Insights', 'Performance Monitoring']
+      link: '#architecture'
     },
     {
       id: 5,
-      icon: <LayoutDashboard size={24} />,
+      icon: <LayoutDashboard size={22} />,
       title: 'Visual Intelligence Dashboard',
       description: 'Centralized control room interface for real-time video telemetry, alerts, and system health metrics.',
-      features: ['Camera Status Overview', 'Scene Analytics', 'Detection Events', 'Visual Insights', 'System Metrics']
+      link: 'http://localhost:3001'
     }
   ];
+
+  const visibleCount = 3;
+
+  const handlePrev = () => {
+    setStartIndex((prev) => Math.max(0, prev - 1));
+  };
+
+  const handleNext = () => {
+    setStartIndex((prev) => Math.min(capabilities.length - visibleCount, prev + 1));
+  };
+
+  const visibleCapabilities = capabilities.slice(startIndex, startIndex + visibleCount);
 
   return (
     <section id="capabilities" className="our-services-section">
       <div className="container">
-        {/* Section Header */}
+        {/* Header with Title Left & Carousel Controls Right (matching reference screenshot) */}
         <div className="our-services-header">
-          <div>
-            <div className="section-tag-light">CORE ENGINES</div>
-            <h2 className="our-services-title">PLATFORM CAPABILITIES</h2>
+          <div className="header-title-group">
+            <h2 className="our-services-title">OUR SERVICE</h2>
           </div>
-          <p className="capabilities-header-desc">
-            FuseSight delivers 5 integrated AI perception layers to process visual data from edge streams to command center dashboards.
-          </p>
+
+          <div className="carousel-controls">
+            <button 
+              className="carousel-nav-btn" 
+              onClick={handlePrev}
+              disabled={startIndex === 0}
+              aria-label="Previous service"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button 
+              className="carousel-nav-btn" 
+              onClick={handleNext}
+              disabled={startIndex >= capabilities.length - visibleCount}
+              aria-label="Next service"
+            >
+              <ChevronRight size={18} />
+            </button>
+          </div>
         </div>
 
-        {/* Capabilities Grid */}
+        {/* 3 Centered Dark Cards Carousel Grid */}
         <div className="services-cards-grid">
-          {capabilities.map((item) => (
+          {visibleCapabilities.map((item) => (
             <div key={item.id} className="dark-service-card">
-              <div className="card-top-row">
-                <div className="card-icon-wrapper">
-                  {item.icon}
-                </div>
-                <span className="card-num-badge">0{item.id}</span>
+              <div className="card-icon-circle">
+                {item.icon}
               </div>
 
               <h3 className="card-title">{item.title}</h3>
               <p className="card-desc">{item.description}</p>
 
-              <div className="card-features-list">
-                {item.features.map((feat, idx) => (
-                  <div key={idx} className="feat-chip">
-                    <CheckCircle2 size={13} className="chip-icon" />
-                    <span>{feat}</span>
-                  </div>
-                ))}
-              </div>
+              <a href={item.link} className="card-learn-link">
+                Learn More
+              </a>
             </div>
           ))}
         </div>
