@@ -61,9 +61,9 @@
 }
 
 .sb-back-btn:hover {
-  background: rgba(0, 229, 255, 0.1);
-  border-color: #00e5ff;
-  color: #00e5ff;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 .sb-header-tabs {
@@ -90,9 +90,9 @@
 }
 
 .sb-tab-link.active {
-  color: #00e5ff;
+  color: #ffffff;
   font-weight: 600;
-  background: rgba(0, 229, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .sb-close-icon-btn {
@@ -143,7 +143,7 @@
   display: inline-block;
   font-size: 1.05rem;
   font-weight: 600;
-  color: #10b981; /* StackBlooms green accent / FuseSight emerald accent */
+  color: #ffffff; /* Updated to monochrome theme */
   margin-bottom: 6px;
   letter-spacing: -0.2px;
 }
@@ -177,11 +177,11 @@
   letter-spacing: -0.5px;
 }
 
-/* H3 Subheadings (Green accent text as seen in StackBlooms) */
+/* H3 Subheadings */
 .sb-subheading {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #10b981;
+  color: #ffffff;
   margin: 28px 0 14px 0;
 }
 
@@ -242,14 +242,14 @@
 
 /* Links */
 .sb-legal-article a {
-  color: #10b981;
+  color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.2s ease;
 }
 
 .sb-legal-article a:hover {
-  color: #34d399;
+  color: #e2e8f0;
 }
 
 /* Contact Info Box */
@@ -273,7 +273,7 @@
 }
 
 .sb-contact-line svg {
-  color: #10b981;
+  color: #ffffff;
   flex-shrink: 0;
 }
 
