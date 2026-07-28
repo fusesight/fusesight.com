@@ -291,13 +291,19 @@
 }
 
 @media (max-width: 1024px) {
-  .hero-footer-row {
-    flex-wrap: nowrap;
-  }
-
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 20px;
+  }
+
+  .hero-cta-group {
+    margin-bottom: 30px;
+  }
+
+  .hero-footer-row {
+    flex-wrap: nowrap;
+    padding: 24px 0;
+    margin-top: 20px;
   }
 
   .hero-visual {
