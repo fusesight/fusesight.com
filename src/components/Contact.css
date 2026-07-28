@@ -93,6 +93,38 @@
   overflow-wrap: break-word;
 }
 
+.method-value a {
+  color: #00e5ff;
+  text-decoration: none;
+}
+
+.method-value a:hover {
+  text-decoration: underline;
+}
+
+.company-meta-badge {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px;
+  border-radius: 14px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta-line {
+  font-size: 0.85rem;
+  color: var(--text-inverse-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta-line strong {
+  color: #ffffff;
+}
+
 .contact-form-col {
   background-color: var(--bg-dark-surface);
   border: 1px solid var(--border-dark);

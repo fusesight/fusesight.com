@@ -92,7 +92,7 @@ export default function LegalModal({ isOpen, onClose, initialTab = 'privacy' }) 
                       <strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
                     </li>
                     <li>
-                      <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Privacy Policy) refers to FuseSight LLC, 650 Market St, San Francisco, CA 94102, USA.
+                      <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Privacy Policy) refers to FuseSight LLC (Founded by Natalie Chamberlain on January 25, 2023), 650 Market St, San Francisco, CA 94102, USA.
                     </li>
                     <li>
                       <strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website, among its many uses.
@@ -246,7 +246,7 @@ export default function LegalModal({ isOpen, onClose, initialTab = 'privacy' }) 
                       <strong>Country/State</strong> refers to: California, United States.
                     </li>
                     <li>
-                      <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in these Terms and Conditions) refers to FuseSight LLC, 650 Market St, San Francisco, CA 94102, USA.
+                      <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in these Terms and Conditions) refers to FuseSight LLC (Founded by Natalie Chamberlain on January 25, 2023), 650 Market St, San Francisco, CA 94102, USA.
                     </li>
                     <li>
                       <strong>Device</strong> means any device that can access the Service such as a computer, a cell phone or a digital tablet.

@@ -36,24 +36,36 @@ export default function Contact() {
               <div className="method-item">
                 <div className="method-icon"><Mail size={20} /></div>
                 <div>
-                  <span className="method-label">Direct Line</span>
-                  <p className="method-value">contact@fusesight.com</p>
+                  <span className="method-label">Direct Email Support</span>
+                  <p className="method-value"><a href="mailto:help@fusesight.com">help@fusesight.com</a></p>
                 </div>
               </div>
 
               <div className="method-item">
                 <div className="method-icon"><Phone size={20} /></div>
                 <div>
-                  <span className="method-label">Enterprise Desk</span>
-                  <p className="method-value">+1 (800) 890-FUSE</p>
+                  <span className="method-label">Direct Hotline</span>
+                  <p className="method-value"><a href="tel:+14155550121">+1 (415) 555-0121</a></p>
                 </div>
               </div>
 
               <div className="method-item">
                 <div className="method-icon"><MapPin size={20} /></div>
                 <div>
-                  <span className="method-label">Headquarters</span>
-                  <p className="method-value">700 Vision Way, Silicon Valley, CA</p>
+                  <span className="method-label">Corporate Headquarters</span>
+                  <p className="method-value">FuseSight LLC<br />650 Market St, San Francisco, CA 94102, USA</p>
+                </div>
+              </div>
+
+              <div className="company-meta-badge">
+                <div className="meta-line">
+                  <span className="meta-lbl">Legal Entity:</span> <strong>FuseSight LLC</strong>
+                </div>
+                <div className="meta-line">
+                  <span className="meta-lbl">Founder:</span> <strong>Natalie Chamberlain</strong>
+                </div>
+                <div className="meta-line">
+                  <span className="meta-lbl">Founded Date:</span> <strong>January 25, 2023</strong>
                 </div>
               </div>
             </div>
