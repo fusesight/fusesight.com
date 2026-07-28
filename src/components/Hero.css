@@ -114,8 +114,13 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  padding-top: 10px;
+  padding: 54px 0;
+  margin-top: 30px;
   flex-wrap: wrap;
+  border-top: 1px solid #e6e6e900;
+  /* ash line */
+  border-bottom: 1px solid #00000000;
+  /* black line */
 }
 
 .trusted-box {
@@ -304,7 +309,7 @@
     padding: 12px 20px;
     border-radius: 12px;
     display: inline-flex;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   }
 
   .hero-bg-ribbon {
