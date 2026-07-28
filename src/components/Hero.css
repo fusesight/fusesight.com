@@ -291,6 +291,10 @@
 }
 
 @media (max-width: 1024px) {
+  .hero-footer-row {
+    flex-wrap: nowrap;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     gap: 40px;
