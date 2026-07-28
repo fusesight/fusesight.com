@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Send, Twitter, Linkedin, MessageCircle, ArrowUp } from 'lucide-react';
 import './Footer.css';
 
-export default function Footer() {
+export default function Footer({ onOpenLegal }) {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
@@ -46,11 +46,15 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h5 className="col-title">Quick Links</h5>
-            <a href="#home">Home</a>
-            <a href="#about">Platform Overview</a>
-            <a href="#capabilities">Service</a>
-            <a href="#contact">Contact Us</a>
+            <h5 className="col-title">Governance & Legal</h5>
+            <button className="footer-legal-btn" onClick={() => onOpenLegal && onOpenLegal('terms')}>
+              Terms & Conditions
+            </button>
+            <button className="footer-legal-btn" onClick={() => onOpenLegal && onOpenLegal('privacy')}>
+              Privacy Policy
+            </button>
+            <a href="#contact">Enterprise Compliance</a>
+            <a href="mailto:help@fusesight.com">Legal Support</a>
           </div>
 
           <div className="footer-col">
@@ -89,13 +93,26 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Horizontal Partner Logos Row matching Image */}
+        {/* Bottom Horizontal Partner Logos Row */}
         <div className="footer-bottom-partners">
           <span className="footer-partner">NVIDIA Jetson</span>
           <span className="footer-partner">DeepStream AI</span>
           <span className="footer-partner">OpenCV CUDA</span>
           <span className="footer-partner">RTSP Stream Grid</span>
+        </div>
 
+        {/* Sub-Footer Copyright & Legal Links Bar */}
+        <div className="footer-copyright-bar">
+          <span className="copyright-text">© 2026 FuseSight LLC. All rights reserved.</span>
+          <div className="bottom-legal-links">
+            <button className="bottom-legal-btn" onClick={() => onOpenLegal && onOpenLegal('terms')}>
+              Terms & Conditions
+            </button>
+            <span className="legal-dot">•</span>
+            <button className="bottom-legal-btn" onClick={() => onOpenLegal && onOpenLegal('privacy')}>
+              Privacy Policy
+            </button>
+          </div>
           <button onClick={scrollToTop} className="back-top-btn" aria-label="Back to top">
             <ArrowUp size={16} />
           </button>
