@@ -107,13 +107,7 @@ export default function Footer({ onOpenLegal }) {
           </div>
         </div>
 
-        {/* Bottom Horizontal Partner Logos Row */}
-        <div className="footer-bottom-partners">
-          <span className="footer-partner">NVIDIA Jetson</span>
-          <span className="footer-partner">DeepStream AI</span>
-          <span className="footer-partner">OpenCV CUDA</span>
-          <span className="footer-partner">RTSP Stream Grid</span>
-        </div>
+
 
         {/* Sub-Footer Copyright & Legal Links Bar */}
         <div className="footer-copyright-bar">
