@@ -18,7 +18,7 @@ export default function Pricing() {
           {/* Billing Switch Toggle */}
           <div className="billing-toggle-container">
             <span className={!isAnnual ? 'active' : ''}>Monthly</span>
-            <button 
+            <button
               className={`toggle-switch ${isAnnual ? 'on' : ''}`}
               onClick={() => setIsAnnual(!isAnnual)}
               aria-label="Toggle annual billing"
@@ -42,7 +42,7 @@ export default function Pricing() {
               </div>
               <h3 className="plan-name">Standard Edge</h3>
               <p className="plan-desc">Ideal for single facilities & localized camera networks.</p>
-              
+
               <div className="price-wrap">
                 <span className="currency">$</span>
                 <span className="amount">{isAnnual ? '24' : '29'}</span>
@@ -92,11 +92,11 @@ export default function Pricing() {
 
             <ul className="plan-features">
               <li><Check size={18} className="check-icon master" /> <strong>Unlimited</strong> Camera Streams & Feeds</li>
-              <li><Check size={18} className="check-icon master" /> <strong>Full AI Scene Intelligence</strong> Platform</li>
-              <li><Check size={18} className="check-icon master" /> NVIDIA Jetson & DeepStream Hardware Support</li>
+              <li><Check size={18} className="check-icon master" /> <strong>Full Smart Scene Intelligence Platform</strong> Platform</li>
+              <li><Check size={18} className="check-icon master" /> Dedicated Edge Hardware Support</li>
               <li><Check size={18} className="check-icon master" /> 24/7 Priority SLA & On-Site Assistance</li>
               <li><Check size={18} className="check-icon master" /> Full REST, gRPC API & Webhook Triggers</li>
-              <li><Check size={18} className="check-icon master" /> Custom AI Model Training & White-Label Option</li>
+              <li><Check size={18} className="check-icon master" /> Custom Smart Model Training & White Label Option</li>
               <li><Check size={18} className="check-icon master" /> Command Center Dashboard Access</li>
             </ul>
 

@@ -27,7 +27,7 @@ export default function Contact() {
           {/* Contact Details Left Column */}
           <div className="contact-info-col">
             <div className="section-tag inverse">GET IN TOUCH</div>
-            <h2 className="contact-title">Ready to Initialize Multi-Camera AI Perception?</h2>
+            <h2 className="contact-title">Ready to Initialize Multi Camera Smart Perception?</h2>
             <p className="contact-desc">
               Speak directly with our visual intelligence engineering team. We typically respond within 2 business hours.
             </p>
@@ -83,34 +83,34 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group">
                   <label htmlFor="name">Full Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="name"
                     required
                     placeholder="Alex Mercer"
                     value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   />
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="email">Work Email</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     id="email"
                     required
                     placeholder="alex@company.com"
                     value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   />
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="plan">Interested Plan / Integration</label>
-                  <select 
+                  <select
                     id="plan"
                     value={formData.plan}
-                    onChange={(e) => setFormData({...formData, plan: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, plan: e.target.value })}
                   >
                     <option value="Standard Edge Plan ($29/mo)">Standard Edge Plan ($29/mo)</option>
                     <option value="Master Enterprise Plan ($99/mo)">Master Enterprise Plan ($99/mo) — Recommended</option>
@@ -120,13 +120,13 @@ export default function Contact() {
 
                 <div className="form-group">
                   <label htmlFor="message">Project Scope / Requirements</label>
-                  <textarea 
+                  <textarea
                     id="message"
                     rows="4"
                     required
                     placeholder="Tell us about your team size, expected throughput, or custom integration needs..."
                     value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   ></textarea>
                 </div>
 

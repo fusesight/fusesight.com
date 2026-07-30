@@ -17,7 +17,7 @@ export default function OurServices() {
       id: 2,
       icon: <Eye size={22} />,
       title: 'Scene Intelligence Platform',
-      description: 'Understands complex activities, spatial relationships, and operational environments through AI vision.',
+      description: 'Understands complex activities, spatial relationships, and operational environments through intelligent perception.',
       link: '#architecture'
     },
     {
@@ -68,16 +68,16 @@ export default function OurServices() {
           </div>
 
           <div className="carousel-controls">
-            <button 
-              className="carousel-nav-btn" 
+            <button
+              className="carousel-nav-btn"
               onClick={handlePrev}
               disabled={startIndex === 0}
               aria-label="Previous service"
             >
               <ChevronLeft size={18} />
             </button>
-            <button 
-              className="carousel-nav-btn" 
+            <button
+              className="carousel-nav-btn"
               onClick={handleNext}
               disabled={startIndex >= capabilities.length - visibleCount}
               aria-label="Next service"

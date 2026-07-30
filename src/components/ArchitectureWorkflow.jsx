@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { 
-  Camera, 
-  Layers, 
-  BrainCircuit, 
-  Bell, 
-  Activity, 
-  ArrowRight, 
+import {
+  Camera,
+  Layers,
+  BrainCircuit,
+  Bell,
+  Activity,
+  ArrowRight,
   CheckCircle,
   Video,
   Radio,
@@ -21,7 +21,7 @@ export default function ArchitectureWorkflow() {
   const workflowSteps = [
     { id: 1, title: 'Multiple Camera Inputs', icon: <Video size={18} /> },
     { id: 2, title: 'Visual Data Fusion', icon: <Layers size={18} /> },
-    { id: 3, title: 'AI Scene Understanding', icon: <BrainCircuit size={18} /> },
+    { id: 3, title: 'Smart Scene Understanding', icon: <BrainCircuit size={18} /> },
     { id: 4, title: 'Event Intelligence', icon: <Bell size={18} /> },
     { id: 5, title: 'Operational Insights', icon: <Activity size={18} /> }
   ];
@@ -34,7 +34,7 @@ export default function ArchitectureWorkflow() {
           <div className="header-title-group">
             <h2 className="architecture-title">TECHNICAL ARCHITECTURE</h2>
             <p className="architecture-subtitle">
-              How FuseSight combines distributed visual sources into a single unified AI intelligence layer.
+              How FuseSight combines distributed visual sources into a single unified intelligence layer.
             </p>
           </div>
         </div>
@@ -62,19 +62,19 @@ export default function ArchitectureWorkflow() {
           <div className="inspector-header">
             <h3 className="inspector-title">3 CORE PRODUCT PIPELINE WIDGETS</h3>
             <div className="widget-selector-tabs">
-              <button 
+              <button
                 className={`widget-tab-btn ${activeWidget === 'widget-a' ? 'active' : ''}`}
                 onClick={() => setActiveWidget('widget-a')}
               >
                 Widget A – Input Layer
               </button>
-              <button 
+              <button
                 className={`widget-tab-btn ${activeWidget === 'widget-b' ? 'active' : ''}`}
                 onClick={() => setActiveWidget('widget-b')}
               >
-                Widget B – AI Perception Process
+                Widget B: Intelligent Perception Process
               </button>
-              <button 
+              <button
                 className={`widget-tab-btn ${activeWidget === 'widget-c' ? 'active' : ''}`}
                 onClick={() => setActiveWidget('widget-c')}
               >
@@ -116,8 +116,8 @@ export default function ArchitectureWorkflow() {
             {activeWidget === 'widget-b' && (
               <div className="widget-panel">
                 <div className="widget-panel-left">
-                  <span className="panel-badge">CORE AI WORKFLOW</span>
-                  <h4 className="panel-heading">Multi-Camera AI Perception Process</h4>
+                  <span className="panel-badge">CORE PERCEPTION WORKFLOW</span>
+                  <h4 className="panel-heading">Multi Camera Perception Process</h4>
                   <p className="panel-desc">
                     Processes incoming frames, aligns spatial coordinates across cameras, executes computer vision tracking, and infers context in real time.
                   </p>
@@ -128,7 +128,7 @@ export default function ArchitectureWorkflow() {
                       '01. Video Ingestion & Decoding Layer',
                       '02. Multi-Camera Spatial Data Fusion Engine',
                       '03. Deep Computer Vision Analysis',
-                      '04. AI Scene Understanding System',
+                      '04. Smart Scene Understanding System',
                       '05. Event Detection Framework',
                       '06. Intelligence Generation & Analytics Layer'
                     ].map((stepText, i) => (
