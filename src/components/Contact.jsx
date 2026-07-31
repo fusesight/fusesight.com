@@ -157,7 +157,7 @@ export default function Contact() {
                   ></textarea>
                 </div>
 
-                <div className="form-group turnstile-container" style={{ margin: '1rem 0' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', width: '100%', margin: '1.5rem 0' }}>
                   <Turnstile 
                     siteKey="0x4AAAAAAEC3QgXtdM-qtxWc" 
                     onSuccess={(token) => setTurnstileToken(token)}
