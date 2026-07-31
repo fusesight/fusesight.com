@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Turnstile } from '@marsidev/react-turnstile';
 import './Contact.css';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,20 +15,29 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!turnstileToken) {
+      alert("Please complete the captcha verification before submitting.");
+      return;
+    }
     try {
+      const payload = {
+        ...formData,
+        "cf-turnstile-response": turnstileToken
+      };
       const response = await fetch('https://formspree.io/f/mykraoog', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(payload)
       });
       if (response.ok) {
         setSubmitted(true);
         setTimeout(() => {
           setSubmitted(false);
           setFormData({ name: '', email: '', plan: 'Master Plan ($99/mo)', message: '' });
+          setTurnstileToken('');
         }, 4000);
       } else {
         console.error('Formspree submission failed');
@@ -144,6 +155,13 @@ export default function Contact() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   ></textarea>
+                </div>
+
+                <div className="form-group turnstile-container" style={{ margin: '1rem 0' }}>
+                  <Turnstile 
+                    siteKey="0x4AAAAAAEC3QgXtdM-qtxWc" 
+                    onSuccess={(token) => setTurnstileToken(token)}
+                  />
                 </div>
 
                 <button type="submit" className="submit-btn">
