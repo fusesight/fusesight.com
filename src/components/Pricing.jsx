@@ -61,7 +61,7 @@ export default function Pricing() {
               <li><Check size={18} className="check-icon" /> Email & Community Support</li>
             </ul>
 
-            <a href="http://localhost:3001" target="_blank" rel="noopener noreferrer" className="plan-btn plan-btn-outlined">
+            <a href={isAnnual ? "https://buy.stripe.com/test_3cIbJ10GJeckdfle8ycMM01" : "https://buy.stripe.com/test_eVq5kD0GJb08dflfcCcMM03"} target="_blank" rel="noopener noreferrer" className="plan-btn plan-btn-outlined">
               Deploy Standard Edge
             </a>
           </div>
@@ -100,7 +100,7 @@ export default function Pricing() {
               <li><Check size={18} className="check-icon master" /> Command Center Dashboard Access</li>
             </ul>
 
-            <a href="http://localhost:3001" target="_blank" rel="noopener noreferrer" className="plan-btn plan-btn-solid">
+            <a href={isAnnual ? "https://buy.stripe.com/test_eVq14n4WZ1pyfntaWmcMM00" : "https://buy.stripe.com/test_4gM00j3SV2tC2AH6G6cMM02"} target="_blank" rel="noopener noreferrer" className="plan-btn plan-btn-solid">
               Get Master Enterprise
               <ArrowRight size={18} />
             </a>
