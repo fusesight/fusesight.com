@@ -21,7 +21,7 @@ export default function Footer({ onOpenLegal }) {
   const handleSubscribe = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://formspree.io/f/meeywnno', {
+      const response = await fetch(import.meta.env.VITE_FORMSPREE_NEWSLETTER, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

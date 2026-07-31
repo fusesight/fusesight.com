@@ -24,7 +24,7 @@ export default function Contact() {
         ...formData,
         "cf-turnstile-response": turnstileToken
       };
-      const response = await fetch('https://formspree.io/f/mykraoog', {
+      const response = await fetch(import.meta.env.VITE_FORMSPREE_CONTACT, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -159,7 +159,7 @@ export default function Contact() {
 
                 <div style={{ display: 'flex', justifyContent: 'center', width: '100%', margin: '1.5rem 0' }}>
                   <Turnstile 
-                    siteKey="0x4AAAAAAEC3QgXtdM-qtxWc" 
+                    siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY} 
                     onSuccess={(token) => setTurnstileToken(token)}
                   />
                 </div>
