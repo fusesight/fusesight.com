@@ -11,13 +11,29 @@ export default function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', plan: 'Master Plan ($99/mo)', message: '' });
-    }, 4000);
+    try {
+      const response = await fetch('https://formspree.io/f/mykraoog', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({ name: '', email: '', plan: 'Master Plan ($99/mo)', message: '' });
+        }, 4000);
+      } else {
+        console.error('Formspree submission failed');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+    }
   };
 
   return (

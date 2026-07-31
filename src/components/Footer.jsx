@@ -18,10 +18,27 @@ export default function Footer({ onOpenLegal }) {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    setSubscribed(true);
-    setTimeout(() => setSubscribed(false), 3000);
+    try {
+      const response = await fetch('https://formspree.io/f/meeywnno', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+      });
+      if (response.ok) {
+        setSubscribed(true);
+        setEmail('');
+        setTimeout(() => setSubscribed(false), 3000);
+      } else {
+        console.error('Formspree newsletter submission failed');
+      }
+    } catch (error) {
+      console.error('Newsletter submission error:', error);
+    }
   };
 
   const scrollToTop = () => {
