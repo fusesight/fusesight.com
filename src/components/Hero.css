@@ -25,7 +25,7 @@
   align-items: flex-start;
   gap: 30px;
   position: relative;
-  z-index: 2;
+  z-index: 20;
 }
 
 /* Badge 05 FUTURISTIC matching Image 1 layout */
@@ -200,8 +200,13 @@
   position: relative;
   max-width: 480px;
   width: 100%;
-  z-index: 15;
-  margin-bottom: -45px;
+  right: -100px;
+  top: -280px;
+  z-index: 35;
+  /* Ensure it stays on top */
+  margin-bottom: -350px;
+  transform: scale(1.9);
+  transform-origin: right bottom;
 }
 
 .hero-main-img {
@@ -213,8 +218,8 @@
 /* Stat placed directly on the grey ribbon matching Image 1 */
 .ribbon-stat-item {
   position: absolute;
-  top: 200px;
-  left: -80px;
+  top: 150px;
+  left: -120px;
   z-index: 4;
   display: flex;
   flex-direction: column;
@@ -223,14 +228,14 @@
 
 .stat-num {
   font-family: var(--font-heading);
-  font-size: 1.85rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: var(--text-main);
   line-height: 1.1;
 }
 
 .stat-lbl {
-  font-size: 0.82rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-muted);
 }
@@ -308,6 +313,14 @@
 
   .hero-visual {
     justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+    right: 0;
+    top: 0;
+    margin-bottom: -20px;
+    transform: none;
   }
 
   .ribbon-stat-item {
