@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Search, ArrowUpRight, Box, Menu, X } from 'lucide-react';
+import { Search, ArrowUpRight, Menu, X } from 'lucide-react';
+import logoImg from '../assets/logo.svg';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -27,10 +28,7 @@ export default function Navbar() {
       <div className="container navbar-container">
         {/* Brand Logo matching FuseSight / visual theme reference */}
         <a href="#home" className="navbar-brand" onClick={closeMobileMenu}>
-          <div className="brand-icon">
-            <Box size={22} strokeWidth={2.2} />
-          </div>
-          <span className="brand-name">FuseSight</span>
+          <img src={logoImg} alt="FuseSight Logo" className="brand-logo-img" style={{ height: '32px' }} />
         </a>
 
         {/* Navigation Links */}

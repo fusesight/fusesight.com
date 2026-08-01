@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Send, Twitter, Linkedin, Facebook, Youtube, ArrowUp } from 'lucide-react';
+import { Send, Twitter, Linkedin, Facebook, Youtube, ArrowUp } from 'lucide-react';
+import logoFooterImg from '../assets/logo for footer.svg';
 import './Footer.css';
 
 const PinterestIcon = ({ size = 16, className = "" }) => (
@@ -51,8 +52,7 @@ export default function Footer({ onOpenLegal }) {
         {/* Top Header Logo Row */}
         <div className="footer-top-brand">
           <a href="#home" className="footer-logo-link">
-            <Box size={24} />
-            <span>FuseSight</span>
+            <img src={logoFooterImg} alt="FuseSight Logo" className="brand-logo-img" style={{ height: '40px' }} />
           </a>
         </div>
 

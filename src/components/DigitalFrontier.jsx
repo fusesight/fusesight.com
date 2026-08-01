@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Play, ArrowRight } from 'lucide-react';
-import helmetImg from '../assets/about-helmet-model.png';
+import helmetImg from '../assets/about-helmet-model.svg';
 import './DigitalFrontier.css';
 
 export default function DigitalFrontier() {

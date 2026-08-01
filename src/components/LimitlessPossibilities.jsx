@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import possibilitiesImg from '../assets/possibilities-model.png';
+import industrialImg from '../assets/Industrial.svg';
+import smartSpaceImg from '../assets/Smart Space.svg';
+import logisticsImg from '../assets/Logistics.svg';
 import './LimitlessPossibilities.css';
 
 export default function LimitlessPossibilities() {
@@ -55,7 +57,7 @@ export default function LimitlessPossibilities() {
           {/* Column 2: Center Image Card */}
           <div className="possibilities-image-card">
             <img
-              src={possibilitiesImg}
+              src={activeTab === 'Industrial' ? industrialImg : activeTab === 'Smart Space' ? smartSpaceImg : logisticsImg}
               alt="FuseSight Perception Visor Model"
               className="possibilities-img"
             />

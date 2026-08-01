@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sliders, Play, Box, Facebook, Twitter, Youtube, Linkedin } from 'lucide-react';
-import heroModelImg from '../assets/hero-model.png';
+import heroModelImg from '../assets/hero-model.svg';
 import './Hero.css';
 
 const PinterestIcon = ({ size = 16, className = "" }) => (

@@ -1,4 +1,7 @@
 import React from 'react';
+import jamesAvatar from '../assets/James Rizaki.svg';
+import samanthaAvatar from '../assets/Samantha Leonardo.svg';
+import markAvatar from '../assets/Mark Trevor.svg';
 import './VoicesOfFuture.css';
 
 export default function VoicesOfFuture() {
@@ -8,21 +11,21 @@ export default function VoicesOfFuture() {
       quote: "FuseSight unified our 60+ plant cameras into a single smart perception grid. Missed events are down to zero.",
       name: "James Rizaki",
       role: "VP of Plant Operations",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+      avatar: jamesAvatar
     },
     {
       id: 2,
       quote: "The multi camera fusion engine detects perimeter anomalies across 4 camera feeds instantly with sub-15ms latency.",
       name: "Samantha Leonardo",
       role: "Chief Security Officer",
-      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
+      avatar: samanthaAvatar
     },
     {
       id: 3,
       quote: "Deploying FuseSight on dedicated edge processing nodes allowed us to automate visual quality monitoring without cloud delays.",
       name: "Mark Trevor",
       role: "Lead Automation Engineer",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+      avatar: markAvatar
     }
   ];
 
