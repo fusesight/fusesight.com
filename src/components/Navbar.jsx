@@ -28,7 +28,7 @@ export default function Navbar() {
       <div className="container navbar-container">
         {/* Brand Logo matching FuseSight / visual theme reference */}
         <a href="#home" className="navbar-brand" onClick={closeMobileMenu}>
-          <img src={logoImg} alt="FuseSight Logo" className="brand-logo-img" style={{ height: '32px' }} />
+          <img src={logoImg} alt="FuseSight Logo" className="brand-logo-img" style={{ height: '46px' }} />
         </a>
 
         {/* Navigation Links */}
