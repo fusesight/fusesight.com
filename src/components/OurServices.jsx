@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Camera, Eye, Cpu, Activity, LayoutDashboard, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Activity, LayoutDashboard, ChevronLeft, ChevronRight } from 'lucide-react';
 import './OurServices.css';
 
 export default function OurServices() {
@@ -8,21 +8,21 @@ export default function OurServices() {
   const capabilities = [
     {
       id: 1,
-      icon: <Camera size={22} />,
+      icon: <img src="/icons/Multi-Camera%20Perception%20Engine.svg" alt="Multi-Camera Perception Engine" style={{ width: 40, height: 40 }} />,
       title: 'Multi-Camera Perception Engine',
       description: 'Combines visual information from multiple camera sources into a connected perception grid.',
       link: '#architecture'
     },
     {
       id: 2,
-      icon: <Eye size={22} />,
+      icon: <img src="/icons/Scene%20Intelligence%20Platform.svg" alt="Scene Intelligence Platform" style={{ width: 40, height: 40 }} />,
       title: 'Scene Intelligence Platform',
       description: 'Understands complex activities, spatial relationships, and operational environments through intelligent perception.',
       link: '#architecture'
     },
     {
       id: 3,
-      icon: <Cpu size={22} />,
+      icon: <img src="/icons/Computer%20Vision%20Analytics%20Engine.svg" alt="Computer Vision Analytics Engine" style={{ width: 40, height: 40 }} />,
       title: 'Computer Vision Analytics Engine',
       description: 'Extracts deep structured metadata, patterns, and actionable insights from raw visual streams.',
       link: '#architecture'
