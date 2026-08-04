@@ -23,6 +23,61 @@ export default function Navbar() {
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (!searchQuery.trim()) return;
+
+    const query = searchQuery.toLowerCase().trim();
+    const sections = [
+      { id: 'home', keywords: ['home', 'start'] },
+      { id: 'about', keywords: ['about', 'us', 'who', 'company', 'frontier'] },
+      { id: 'capabilities', keywords: ['service', 'capability', 'offer', 'what we do', 'feature'] },
+      { id: 'architecture', keywords: ['architecture', 'tech', 'stack', 'system', 'build', 'workflow'] },
+      { id: 'pricing', keywords: ['price', 'pricing', 'cost', 'plan', 'buy'] },
+      { id: 'contact', keywords: ['contact', 'touch', 'message', 'support', 'help'] },
+      { id: 'team', keywords: ['team', 'people', 'future', 'dive'] }
+    ];
+
+    let targetId = null;
+    for (const section of sections) {
+      if (section.keywords.some(kw => query.includes(kw))) {
+        targetId = section.id;
+        break;
+      }
+    }
+
+    if (targetId) {
+      const element = document.getElementById(targetId);
+      if (element) {
+        // Account for sticky header height (approx 80px)
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+        
+        setSearchQuery('');
+        closeMobileMenu();
+        return;
+      }
+    }
+    
+    // Fallback to native browser search if no section matches
+    if (window.find) {
+      const found = window.find(searchQuery);
+      if (!found) {
+        alert(`Could not find "${searchQuery}" on the page.`);
+      } else {
+        closeMobileMenu();
+      }
+    } else {
+      alert(`No exact section found for "${searchQuery}".`);
+    }
+  };
+
   return (
     <header className={`navbar-header ${isScrolled ? 'scrolled' : 'at-top'} ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
       <div className="container navbar-container">
@@ -40,32 +95,32 @@ export default function Navbar() {
           <a href="#pricing" className="nav-link" onClick={closeMobileMenu}>Pricing</a>
           <a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a>
 
-          <div className="mobile-search-pill">
+          <form className="mobile-search-pill" onSubmit={handleSearch}>
             <input
               type="text"
               placeholder="Search capabilities..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <button className="search-btn" aria-label="Search">
+            <button type="submit" className="search-btn" aria-label="Search">
               <Search size={16} />
             </button>
-          </div>
+          </form>
         </nav>
 
         {/* Search Bar & Action Buttons */}
         <div className="navbar-actions">
-          <div className="search-pill">
+          <form className="search-pill" onSubmit={handleSearch}>
             <input
               type="text"
               placeholder="I am looking for..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <button className="search-btn" aria-label="Search">
+            <button type="submit" className="search-btn" aria-label="Search">
               <Search size={16} />
             </button>
-          </div>
+          </form>
 
           <a
             href="http://localhost:3001"
