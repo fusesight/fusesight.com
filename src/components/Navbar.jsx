@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { Search, ArrowUpRight, Menu, X } from 'lucide-react';
 import logoImg from '../assets/logo.svg';
 import './Navbar.css';
@@ -7,6 +8,9 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +26,29 @@ export default function Navbar() {
   }, []);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    closeMobileMenu();
+    
+    if (targetId === '') {
+      navigate('/');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    
+    if (location.pathname !== '/') {
+      navigate('/#' + targetId);
+    } else {
+      const element = document.getElementById(targetId);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    }
+  };
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -47,9 +74,15 @@ export default function Navbar() {
     }
 
     if (targetId) {
+      if (location.pathname !== '/') {
+        navigate('/#' + targetId);
+        setSearchQuery('');
+        closeMobileMenu();
+        return;
+      }
+      
       const element = document.getElementById(targetId);
       if (element) {
-        // Account for sticky header height (approx 80px)
         const headerOffset = 80;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -65,7 +98,6 @@ export default function Navbar() {
       }
     }
     
-    // Fallback to native browser search if no section matches
     if (window.find) {
       const found = window.find(searchQuery);
       if (!found) {
@@ -81,19 +113,18 @@ export default function Navbar() {
   return (
     <header className={`navbar-header ${isScrolled ? 'scrolled' : 'at-top'} ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
       <div className="container navbar-container">
-        {/* Brand Logo matching FuseSight / visual theme reference */}
-        <a href="#home" className="navbar-brand" onClick={closeMobileMenu}>
+        <a href="/" className="navbar-brand" onClick={(e) => handleNavClick(e, '')}>
           <img src={logoImg} alt="FuseSight Logo" className="brand-logo-img" style={{ height: '46px' }} />
         </a>
 
-        {/* Navigation Links */}
         <nav className={`navbar-nav ${isMobileMenuOpen ? 'open' : ''}`}>
-          <a href="#home" className="nav-link active" onClick={closeMobileMenu}>Home</a>
-          <a href="#about" className="nav-link" onClick={closeMobileMenu}>About</a>
-          <a href="#capabilities" className="nav-link" onClick={closeMobileMenu}>Service</a>
-          <a href="#architecture" className="nav-link" onClick={closeMobileMenu}>Architecture</a>
-          <a href="#pricing" className="nav-link" onClick={closeMobileMenu}>Pricing</a>
-          <a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a>
+          <a href="/#home" className={`nav-link ${location.pathname === '/' && location.hash === '' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'home')}>Home</a>
+          <a href="/#about" className="nav-link" onClick={(e) => handleNavClick(e, 'about')}>About</a>
+          <a href="/#capabilities" className="nav-link" onClick={(e) => handleNavClick(e, 'capabilities')}>Service</a>
+          <a href="/#architecture" className="nav-link" onClick={(e) => handleNavClick(e, 'architecture')}>Architecture</a>
+          <a href="/#pricing" className="nav-link" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
+          <a href="/#contact" className="nav-link" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a>
+          <Link to="/product" className={`nav-link ${location.pathname === '/product' ? 'active' : ''}`} onClick={closeMobileMenu}>Product</Link>
 
           <form className="mobile-search-pill" onSubmit={handleSearch}>
             <input
@@ -108,7 +139,6 @@ export default function Navbar() {
           </form>
         </nav>
 
-        {/* Search Bar & Action Buttons */}
         <div className="navbar-actions">
           <form className="search-pill" onSubmit={handleSearch}>
             <input
@@ -133,7 +163,6 @@ export default function Navbar() {
             <ArrowUpRight size={16} />
           </a>
 
-          {/* Mobile Hamburger Toggle Button */}
           <button
             className="mobile-toggle-btn"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
