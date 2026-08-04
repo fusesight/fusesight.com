@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import {
-  Camera,
-  Layers,
-  BrainCircuit,
-  Bell,
-  Activity,
+  Cctv,
+  Combine,
+  ScanEye,
+  Zap,
+  BarChart3,
+  Cpu,
+  MonitorPlay,
+  Factory,
+  Building2,
+  Router,
   ArrowRight,
   CheckCircle,
-  Video,
-  Radio,
-  Sliders,
-  ShieldCheck,
-  Server
 } from 'lucide-react';
 import './ArchitectureWorkflow.css';
 
@@ -19,11 +19,11 @@ export default function ArchitectureWorkflow() {
   const [activeWidget, setActiveWidget] = useState('widget-b');
 
   const workflowSteps = [
-    { id: 1, title: 'Multiple Camera Inputs', icon: <Video size={18} /> },
-    { id: 2, title: 'Visual Data Fusion', icon: <Layers size={18} /> },
-    { id: 3, title: 'Smart Scene Understanding', icon: <BrainCircuit size={18} /> },
-    { id: 4, title: 'Event Intelligence', icon: <Bell size={18} /> },
-    { id: 5, title: 'Operational Insights', icon: <Activity size={18} /> }
+    { id: 1, title: 'Multiple Camera Inputs', icon: <Cctv size={18} /> },
+    { id: 2, title: 'Visual Data Fusion', icon: <Combine size={18} /> },
+    { id: 3, title: 'Smart Scene Understanding', icon: <ScanEye size={18} /> },
+    { id: 4, title: 'Event Intelligence', icon: <Zap size={18} /> },
+    { id: 5, title: 'Operational Insights', icon: <BarChart3 size={18} /> }
   ];
 
   return (
@@ -96,12 +96,12 @@ export default function ArchitectureWorkflow() {
                 <div className="widget-panel-right">
                   <div className="items-grid">
                     {[
-                      { title: 'Camera Networks', icon: <Camera size={16} /> },
-                      { title: 'Edge Devices', icon: <Server size={16} /> },
-                      { title: 'RTSP/ONVIF Video Streams', icon: <Video size={16} /> },
-                      { title: 'Industrial Environments', icon: <Radio size={16} /> },
-                      { title: 'Smart Facilities', icon: <ShieldCheck size={16} /> },
-                      { title: 'IoT Vision Sensors', icon: <Sliders size={16} /> }
+                      { title: 'Camera Networks', icon: <Cctv size={16} /> },
+                      { title: 'Edge Devices', icon: <Cpu size={16} /> },
+                      { title: 'RTSP/ONVIF Video Streams', icon: <MonitorPlay size={16} /> },
+                      { title: 'Industrial Environments', icon: <Factory size={16} /> },
+                      { title: 'Smart Facilities', icon: <Building2 size={16} /> },
+                      { title: 'IoT Vision Sensors', icon: <Router size={16} /> }
                     ].map((item, i) => (
                       <div key={i} className="input-item-chip">
                         {item.icon}
