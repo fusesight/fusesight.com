@@ -42,7 +42,7 @@ export default function Hero() {
 
           <div className="hero-cta-group">
             <a href="http://localhost:3001" target="_blank" rel="noopener noreferrer" className="hero-btn-primary">
-              Launch Dashboard
+              Launch FuseSight V1
             </a>
             <a href="#architecture" className="hero-btn-secondary">
               Explore Architecture
