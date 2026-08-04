@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Sliders, Play, Box, Facebook, Twitter, Youtube, Linkedin } from 'lucide-react';
 import heroModelImg from '../assets/hero-model.svg';
 import './Hero.css';
@@ -41,9 +42,9 @@ export default function Hero() {
           </p>
 
           <div className="hero-cta-group">
-            <a href="http://localhost:3001" target="_blank" rel="noopener noreferrer" className="hero-btn-primary">
+            <Link to="/product" className="hero-btn-primary">
               Launch FuseSight V1
-            </a>
+            </Link>
             <a href="#architecture" className="hero-btn-secondary">
               Explore Architecture
             </a>

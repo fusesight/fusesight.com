@@ -152,16 +152,14 @@ export default function Navbar() {
             </button>
           </form>
 
-          <a
-            href="http://localhost:3001"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/product"
             className="cta-pill-btn"
             onClick={closeMobileMenu}
           >
             FuseSight V1
             <ArrowUpRight size={16} />
-          </a>
+          </Link>
 
           <button
             className="mobile-toggle-btn"
