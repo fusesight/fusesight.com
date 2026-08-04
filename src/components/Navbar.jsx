@@ -8,7 +8,7 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -30,13 +30,13 @@ export default function Navbar() {
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
     closeMobileMenu();
-    
+
     if (targetId === '') {
       navigate('/');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
-    
+
     if (location.pathname !== '/') {
       navigate('/#' + targetId);
     } else {
@@ -80,24 +80,24 @@ export default function Navbar() {
         closeMobileMenu();
         return;
       }
-      
+
       const element = document.getElementById(targetId);
       if (element) {
         const headerOffset = 80;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
+
         window.scrollTo({
           top: offsetPosition,
           behavior: 'smooth'
         });
-        
+
         setSearchQuery('');
         closeMobileMenu();
         return;
       }
     }
-    
+
     if (window.find) {
       const found = window.find(searchQuery);
       if (!found) {
@@ -124,7 +124,7 @@ export default function Navbar() {
           <a href="/#architecture" className="nav-link" onClick={(e) => handleNavClick(e, 'architecture')}>Architecture</a>
           <a href="/#pricing" className="nav-link" onClick={(e) => handleNavClick(e, 'pricing')}>Pricing</a>
           <a href="/#contact" className="nav-link" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a>
-          <Link to="/product" className={`nav-link ${location.pathname === '/product' ? 'active' : ''}`} onClick={closeMobileMenu}>Product</Link>
+
 
           <form className="mobile-search-pill" onSubmit={handleSearch}>
             <input
