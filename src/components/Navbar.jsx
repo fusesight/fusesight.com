@@ -74,7 +74,7 @@ export default function Navbar() {
             className="cta-pill-btn"
             onClick={closeMobileMenu}
           >
-            Dashboard
+            FuseSight V1
             <ArrowUpRight size={16} />
           </a>
 
