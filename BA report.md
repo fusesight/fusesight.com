@@ -333,4 +333,3 @@ FuseSight.com will serve as a premium digital presence for FuseSight, a Multi-Ca
 
 The platform will communicate computer vision intelligence, multi-camera perception, scene understanding, and visual analytics capabilities, positioning FuseSight as a next-generation solution for AI Vision Systems, Computer Vision Intelligence, Multi-Camera Analytics, and Enterprise Visual Intelligence Platforms.
 
-(exmplae professional web sites - https://stackblooms.com/ ,https://kivoragroup.com/ )
